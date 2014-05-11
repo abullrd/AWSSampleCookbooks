@@ -6,6 +6,7 @@ node[:deploy].each do |application, deploy|
 
   template '/etc/servers.txt' do
     owner     node['opsworks_java']['tomcat']['user']
+    mode      '666'
     source    'servers.txt.erb'
   end
 end

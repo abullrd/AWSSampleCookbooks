@@ -8,5 +8,6 @@
 
 template '/etc/setup.txt' do
   owner     node['opsworks_java']['tomcat']['user']
+  mode      '666'
   source    'setup.txt.erb'
 end
