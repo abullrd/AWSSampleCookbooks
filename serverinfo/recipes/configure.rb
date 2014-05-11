@@ -4,8 +4,8 @@ node[:deploy].each do |application, deploy|
     next
   end
 
-  template '/etc/servers.conf' do
-    source    'servers.info.erb'
+  template '/etc/servers.txt' do
+    source    'servers.txt.erb'
   end
 end
 
